@@ -4,7 +4,9 @@ const port = 1337;
 const dir = __dirname + '/public/';
 
 app.use(express.static('public'));
-app.use(express.static('public/img'));
+app.use(express.static('public/css'));
+app.use(express.static('public/images'));
+app.use(express.static('public/js'));
 
 app.get('/', (request, response) => {
     response.sendFile(dir + 'index.html');
